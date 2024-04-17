@@ -9,7 +9,7 @@ def imageName = "${docker_registry}/edu/edu_baseinfo"
 def P_NAMESPACE = "devops-slave"
 def P_SLAVE_PVC = "jenkins-slave-pvc"
 def P_EMAIL = "kyleee0522@gmail.com"
-def git_ops_name = "backend_gitops"
+def git_ops_name = "backend_gitops_test"
 
 def TAG = getTag(gitBranch)
 
