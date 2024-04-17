@@ -56,7 +56,7 @@ public class RedisBiMdbCmdCntr {
 						bc.REF4 as ref4,
 						bc.REF5 as ref5
 				   FROM baseinfo.BI_CSYSCD bc
-				   WHERE bc.GRP_ID IN ("0002")
+				   WHERE bc.GRP_ID IN ("0006")
 				   ORDER BY grpId ASC;
 				""";
 		List<BiCsyscdOutQryDto> dbList = jdbcTemplate.query(sql, (rs, rowNum) -> {
