@@ -61,11 +61,11 @@ public class RedisClusterConfig {
 
     @Bean(name = "redisObjectTemplate")
     public RedisTemplate<String, Object> redisTemplate() {
-        RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
-        redisTemplate.setKeySerializer(new StringRedisSerializer());
-        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
-        redisTemplate.setConnectionFactory(redisConnectionFactory());
-        return redisTemplate;
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
+        template.setKeySerializer(new StringRedisSerializer());
+        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        template.setConnectionFactory(redisConnectionFactory());
+        return template;
     }
 
     @Bean(name = "reactiveRedisConnectionFactory")
